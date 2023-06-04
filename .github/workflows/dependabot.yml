@@ -3,6 +3,20 @@
 # Please see the documentation for all configuration options:
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
+
+name: Customize how Dependabot maintains your repo
+
+on:
+  push:
+    branches: [ "master" ]
+    tags:
+      - "*.*.*"
+  pull_request:
+    branches: [ "master" ]
+    tags:
+      - "*.*.*"
+  workflow_dispatch:
+
 version: 2
 updates:
   # Enable version updates for javascript
